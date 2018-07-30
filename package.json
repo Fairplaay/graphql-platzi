@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "db:migrate": "knex migrate:latest --knexfile=db/knexfile.js",
+    "db:seed": "knex seed:run --knexfile=db/knexfile.js"
   },
   "keywords": [],
   "author": "",
@@ -15,11 +17,16 @@
     "apollo-server": "^2.0.0",
     "apollo-server-express": "^2.0.0",
     "body-parser": "^1.18.3",
+    "casual": "^1.5.19",
     "express": "^4.16.3",
     "graphql": "^0.13.2",
     "graphql-server-express": "^1.4.0",
     "graphql-tools": "^3.0.5",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "knex": "^0.15.2",
+    "objection": "^1.2.2",
+    "sqlite3": "^4.0.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+  }
 }
